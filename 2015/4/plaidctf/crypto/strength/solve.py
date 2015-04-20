@@ -1,5 +1,7 @@
 __author__ = 'Ping'
 import itertools
+
+# i reused inverse_mod fuction from crypto lazy challenge
 from crypto.lazy.utils import inverse_mod
 
 # http://blogs.msdn.com/b/drnick/archive/2006/09/20/attacks-on-rsa.aspx
@@ -59,9 +61,9 @@ c2 = c[e.index(e2)]
 
 # i compute m = (a1^c1 * a2^c2) mod n
 # http://en.wikipedia.org/wiki/Modular_exponentiation?hc_location=ufi
-# the following formula given by my young friend GiapLV
+# the following formula given by my young friend zihawk
 m = (pow(inverse_mod(c1, n), abs(a1), n) * pow(c2, a2, n)) % n
 
 
-# an i get the flag
+# and i got the flag
 print hex(m)[2:-1].decode('hex')
