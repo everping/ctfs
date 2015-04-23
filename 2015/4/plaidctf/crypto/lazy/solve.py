@@ -58,7 +58,7 @@ def find_short_vector(matrix):
 
 
 def main():
-    cipher, pub_keys = load_data()
+    pub_keys, cipher = load_data()
     my_matrix = create_matrix_from_knapsack(cipher, pub_keys)
 
     # Apply LLL algorithm to matrix
