@@ -81,8 +81,7 @@ def main():
     print flag
 
 
-if __name__ == '__main__':
-    main()
+main()
 
 
 
