@@ -2,7 +2,7 @@ This Challenge gives us a encrypted file (flag.enc) and a PEM file (pub.key) con
 
 The first step is to extract the public key:
 
-openssl rsa -in pub.key -pubin -text -noout
+`openssl rsa -in pub.key -pubin -text -noout`
 
 We obtain:
 
