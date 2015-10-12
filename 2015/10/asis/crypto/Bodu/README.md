@@ -14,12 +14,12 @@ e = 0x0365962e8daba7ba92fc08768a5f73b3854f4c79969d5518a078a034437c4669bdb705be4d
 
 One interesting thing is the public exponent is quite large, approximately modulus. I immediately refer to Wiener's attack (https://en.wikipedia.org/wiki/Wiener's_attack). But after trying to implement this attack, I still cannot find the private exponent.
 
-### Where is the problem?
+### What is the problem?
 
 
 After a while of confusion and reading other attacks on RSA, I started paying attention to the Challenge name and realized Bodu = Boneh and Durfee attack.
 
-The explanation is, Wiener’s attack is only applied when d<N^0.25, if d is greater than this value, there is no answer. Two researchers Dan Boneh and Glenn Durfee then offered their own method to find d based on grid computing and allow finding d < N^0.292.
+The explanation is, Wiener’s attack is only applied when `d<N^0.25`, if d is greater than this value, there is no answer. Two researchers Dan Boneh and Glenn Durfee then offered their own method to find d based on lattice basis reduction and allow finding `d < N^0.292`.
 
 I found an Implementation of Boneh and Durfee Attack here at https://github.com/mimoo/RSA-and-LLL-attacks (Thanks to David Wong). It's working  works on Sagemath (https://cloud.sanagemath.com)
 
