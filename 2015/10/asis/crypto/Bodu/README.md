@@ -1,4 +1,4 @@
-This Challenge gives us a encrypted file (flag.enc) and a PEM file (pub.key) containing the public key. This is clearly a RSA Challenge.
+This Challenge gives us an encrypted file (flag.enc) and a PEM file (pub.key) containing the public key. This is clearly a RSA Challenge.
 
 The first step is to extract the public key:
 
