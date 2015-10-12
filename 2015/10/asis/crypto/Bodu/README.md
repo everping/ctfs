@@ -16,13 +16,12 @@ One interesting thing is the public exponent is quite large, approximately modul
 
 ### What is the problem?
 
-
 After a while of confusion and reading other attacks on RSA, I started paying attention to the Challenge name and realized Bodu = Boneh and Durfee attack.
 
-The explanation is, Wiener’s attack is only applied when `d<N^0.25`, if d is greater than this value, there is no answer. Two researchers Dan Boneh and Glenn Durfee then offered their own method to find d based on lattice basis reduction and allow finding `d < N^0.292`.
+The explanation is, Wiener’s attack is only applied when `d<N^0.25`, if d is greater than this value, there is no answer. Two researchers Dan Boneh and Glenn Durfee then offered their own method to find d based on lattice basis reduction and allow finding `d < N^0.292`. You 
 
-I found an Implementation of Boneh and Durfee Attack here at https://github.com/mimoo/RSA-and-LLL-attacks (Thanks to David Wong). It's working  works on Sagemath (https://cloud.sanagemath.com)
+I found an Implementation of Boneh and Durfee Attack at https://github.com/mimoo/RSA-and-LLL-attacks (Thanks to David Wong). It works on Sagemath (https://cloud.sanagemath.com)
 
-Now Here we found `d = 89508186630638564513494386415865407147609702392949250864642625401059935751367507`
+Here we found `d = 89508186630638564513494386415865407147609702392949250864642625401059935751367507`
 
-Apply RSA and obtained `flag = ASIS{b472266d4dd916a23a7b0deb5bc5e63f}`
+Apply RSA and obtain `flag = ASIS{b472266d4dd916a23a7b0deb5bc5e63f}`
