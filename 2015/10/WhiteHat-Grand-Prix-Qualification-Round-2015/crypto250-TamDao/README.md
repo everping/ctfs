@@ -10,5 +10,5 @@
 
 > http://lab11b.grandprix.whitehatvn.com:1337 (Mirror)
 
-## Write-up
+## [Write-up](solution.py)
 
