@@ -35,7 +35,7 @@ def get_secret_size():
 
 
 # This challenge is related to a known attack - Poodle Attack
-# I did look into the code of StrongLaw for reference http://l4w.io/2015/01/tetcon-ctf-2015-crypto200-the-poodle-attack/
+# I did look into the code of l4w for reference http://l4w.io/2015/01/tetcon-ctf-2015-crypto200-the-poodle-attack/
 # Thanks young guy :)
 def get_secret():
     secret_size = get_secret_size()
