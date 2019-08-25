@@ -55,6 +55,7 @@ namespace PDFStuff {
 }
 ```
 If you want to try it, save it as a php file (payload.php) and turn off `phar.readonly` directive in `php.ini` then execute the command `php payload.php`. You will get file `poc.gif` and use it to do next steps.
+
 I should explain a bit about some special points in my code:
 - `GIF89a` is included as the prefix of output file because I want to bypass extension checking
 - We have to pass to `$payload->tmpfile` the file we want to read. I tried with `flag.php` and got failed, but `/etc/passwd` worked so I think we need an absolute path. I read `/etc/apache2/sites-enabled/000-default.conf` first to get the full path of web source code and then luckily, I found `/var/www/site/flag.php`
